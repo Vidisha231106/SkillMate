@@ -1,0 +1,328 @@
+body {
+    background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 10px auto;
+    background: rgba(255,255,255,0.97);
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(80, 80, 160, 0.18);
+    position: relative;
+}
+.controls {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #f3f6fd;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(106,130,251,0.07);
+}
+.controls label {
+    font-weight: 600;
+    color: #4a5fc1;
+    margin-right: 4px;
+}
+.controls select, .controls button {
+    border-radius: 6px;
+    border: 1.5px solid #bfc9d1;
+    padding: 7px 14px;
+    font-size: 1em;
+    background: #f8faff;
+    color: #2a3a4a;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    margin-right: 6px;
+}
+.controls button {
+    background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 2px 8px rgba(106,130,251,0.09);
+    cursor: pointer;
+}
+.controls button:hover {
+    background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+    box-shadow: 0 4px 16px rgba(252,92,125,0.13);
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(106,130,251,0.07);
+    box-sizing: border-box;
+}
+form fieldset {
+    border: 1.5px solid #a3bffa;
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin-bottom: 10px;
+    background: #fafdff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(106,130,251,0.04);
+    position: relative;
+}
+form fieldset > label {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9em;
+    color: #6a82fb;
+}
+form fieldset > label input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+form legend {
+    font-weight: bold;
+    color: #6a82fb;
+    font-size: 1.13em;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    padding-right: 80px;
+}
+input, textarea, select {
+    width: 90%;
+    max-width: 90%;
+    margin: 8px 5% 16px 5%;
+    padding: 6px 8px;
+    border: 1.5px solid #bfc9d1;
+    border-radius: 7px;
+    font-size: 0.95em;
+    background: #f4f7fa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(106,130,251,0.04);
+}
+input:focus, textarea:focus, select:focus {
+    border-color: #6a82fb;
+    outline: none;
+    box-shadow: 0 0 0 2px #b2bfff44;
+}
+textarea {
+    min-height: 70px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+.preview-container {
+    margin-top: 15px;
+}
+.preview-container > h2 {
+    color: #4a5fc1;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+.resume-preview {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-height: 400px;
+    padding: 20px;
+    font-size: 1em;
+    transition: font-family 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.a4-page {
+    width: 210mm;
+    height: 280mm;
+    background: #fff;
+    border: 2px solid #6a82fb;
+    border-radius: 14px;
+    padding: 12mm;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    transform-origin: top left;
+    transform: scale(0.85);
+}
+/* Font classes */
+.font-calibri { font-family: Calibri, Arial, sans-serif; }
+.font-arial { font-family: Arial, sans-serif; }
+.font-helvetica { font-family: Helvetica, Arial, sans-serif; }
+.font-lato { font-family: 'Lato', Arial, sans-serif; }
+.font-cambria { font-family: Cambria, Georgia, serif; }
+.font-georgia { font-family: Georgia, serif; }
+.font-garamond { font-family: Garamond, Georgia, serif; }
+/* Modern Template */
+.template-modern {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    min-height: calc(280mm - 24mm);
+}
+.template-modern .sidebar {
+    width: 30%;
+    background: linear-gradient(135deg, #e0e7ff 0%, #f3f6fd 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(106,130,251,0.07);
+}
+.template-modern .main-content {
+    width: 70%;
+}
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+    display: block;
+}
+.progress {
+    background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+    height: 100%;
+    border-radius: 10px;
+    width: 80%;
+    display: block;
+}
+/* Traditional Template */
+.template-traditional {
+    padding: 20px;
+    border-left: 6px solid #6a82fb;
+    background: #fafdff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(106,130,251,0.07);
+    min-height: calc(280mm - 24mm);
+}
+.template-traditional .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Technical Template */
+.template-technical {
+    border: 2px solid #4a5fc1;
+    padding: 20px;
+    background: #fafdff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(106,130,251,0.07);
+    min-height: calc(280mm - 24mm);
+    margin-bottom: 4px;
+}
+.template-technical .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.template-technical .links {
+    font-size: 0.95em;
+    color: #6a82fb;
+}
+@media (max-width: 900px) {
+    .template-modern {
+        flex-direction: column;
+    }
+    .template-modern .sidebar, .template-modern .main-content {
+        width: 100%;
+    }
+    form {
+        grid-template-columns: 1fr;
+        padding: 12px 4px;
+    }
+    form fieldset {
+        padding: 10px 6px;
+    }
+    .a4-page {
+        padding: 12px 4px;
+    }
+}
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    body, html {
+        background: none !important;
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        width: 210mm !important;
+        height: 297mm !important;
+    }
+    .a4-page {
+        box-shadow: none !important;
+        border: 2px solid #6a82fb !important;
+        width: 210mm !important;
+        height: 280mm !important;
+        margin: 0 !important;
+        padding: 12mm !important;
+        border-radius: 0 !important;
+        transform: none !important;
+    }
+    .container > h1 {
+        display: none !important;
+    }
+    .controls, .preview-container > h2, form {
+        display: none !important;
+    }
+    .resume-preview {
+        transform: none !important;
+        width: 100% !important;
+        max-width: none !important;
+    }
+    .resume-preview, .a4-page, .template-modern, .template-traditional, .template-technical {
+        page-break-inside: avoid !important;
+        height: 280mm !important;
+        min-height: 280mm !important;
+        max-height: 280mm !important;
+    }
+    .template-modern {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 20px !important;
+        height: 100% !important;
+    }
+    .template-modern .sidebar {
+        width: 30% !important;
+        background: #f0f4fa !important;
+        padding: 15px !important;
+        border-radius: 8px !important;
+    }
+    .template-modern .main-content {
+        width: 70% !important;
+    }
+    .progress-bar, .progress {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: #e0e0e0 !important;
+    }
+    .progress {
+        background: #4a90e2 !important;
+    }
+    .template-technical {
+        border: 2px solid #4a5fc1 !important;
+        padding: 20px !important;
+        background: #fafdff !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        margin-bottom: 4px !important;
+    }
+}

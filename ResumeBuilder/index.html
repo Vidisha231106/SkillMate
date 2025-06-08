@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <div class="controls">
+            <label for="fontSelect">Font:</label>
+            <select id="fontSelect">
+                <option value="calibri">Calibri</option>
+                <option value="arial">Arial</option>
+                <option value="helvetica">Helvetica</option>
+                <option value="lato">Lato</option>
+                <option value="cambria">Cambria</option>
+                <option value="georgia">Georgia</option>
+                <option value="garamond">Garamond</option>
+            </select>
+            <label for="templateSelect">Template:</label>
+            <select id="templateSelect">
+                <option value="modern">Modern</option>
+                <option value="traditional">Traditional</option>
+                <option value="technical">Technical</option>
+            </select>
+            <button id="saveBtn">Save</button>
+            <button id="loadBtn">Load</button>
+            <button id="printBtn">Print / Export as PDF (Selectable Text)</button>
+        </div>
+        <form id="resumeForm">
+            <fieldset>
+                <legend>Header</legend>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="title" placeholder="Title (e.g. Software Engineer)">
+                <input type="text" id="contact" placeholder="Contact Info (Email, Phone)">
+                <input type="text" id="github" placeholder="GitHub (for Technical)">
+                <input type="text" id="linkedin" placeholder="LinkedIn (for Technical)">
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="summary" checked> Include</label>
+                <legend>Professional Summary / Objective</legend>
+                <textarea id="summary" placeholder="Brief summary or objective"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="experience" checked> Include</label>
+                <legend>Work Experience</legend>
+                <textarea id="experience" placeholder="List your work experience"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="education" checked> Include</label>
+                <legend>Education</legend>
+                <textarea id="education" placeholder="Your education details"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="skills" checked> Include</label>
+                <legend>Skills</legend>
+                <textarea id="skills" placeholder="List your skills (comma separated)"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="techSkills" checked> Include</label>
+                <legend>Technical Skills Summary (for Technical)</legend>
+                <textarea id="techSkills" placeholder="Technical skills summary"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="projects" checked> Include</label>
+                <legend>Projects / Achievements</legend>
+                <textarea id="projects" placeholder="Projects or achievements"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="languages" checked> Include</label>
+                <legend>Languages</legend>
+                <textarea id="languages" placeholder="Languages you know (comma separated)"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="certifications" checked> Include</label>
+                <legend>Certifications & Training</legend>
+                <textarea id="certifications" placeholder="Certifications and training"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="opensource" checked> Include</label>
+                <legend>Open Source Contributions (for Technical)</legend>
+                <textarea id="opensource" placeholder="Open source contributions"></textarea>
+            </fieldset>
+            <fieldset>
+                <label><input type="checkbox" class="section-toggle" data-section="additional" checked> Include</label>
+                <legend>Additional Sections (Volunteer, Awards)</legend>
+                <textarea id="additional" placeholder="Volunteer work, awards, etc."></textarea>
+            </fieldset>
+        </form>
+        <div class="preview-container">
+            <h2>Preview</h2>
+            <div id="resumePreview" class="resume-preview"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
