@@ -1,0 +1,105 @@
+.resume-preview {
+    background: white;
+    color: #2d3748;
+    width: 21cm; /* A4 width */
+    min-height: 29.7cm; /* A4 height */
+    margin: 0 auto;
+    padding: 2.5cm; /* Standard A4 margins */
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+@page {
+    size: A4;
+    margin: 2.5cm; /* Consistent margins on all pages */
+}
+
+/* ...existing code... */
+
+@media print {
+    .resume-preview {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        break-inside: avoid;
+        margin-bottom: 2cm; /* Add space between pages */
+    }
+
+    /* Ensure proper page breaks and spacing */
+    .page-break {
+        page-break-before: always;
+        margin-top: 2cm;
+    }
+
+    section {
+        break-inside: avoid;
+        margin-bottom: 1.5cm; /* Space between sections */
+    }
+
+    /* Technical template specific print styles */
+    .resume-technical {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .resume-technical .skills-grid,
+    .resume-technical .experience-grid {
+        break-inside: avoid;
+        margin-bottom: 1cm;
+    }
+
+    /* Improved page break control */
+    h1, h2, h3, h4 {
+        break-after: avoid;
+        break-inside: avoid;
+        margin-bottom: 0.5cm;
+    }
+
+    li {
+        break-inside: avoid;
+    }
+
+    /* Force backgrounds and colors to print */
+    .resume-technical .header,
+    .resume-technical .skills-grid,
+    .resume-technical .experience-grid {
+        background-color: inherit !important;
+        color: inherit !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    @page {
+        margin: 2.5cm;
+        /* Add space between pages */
+        margin-bottom: 3cm;
+    }
+
+    /* Reset container styles for print */
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+}
+
+/* Technical template specific styles to match preview */
+.resume-technical {
+    background: white;
+    color: #2d3748;
+}
+
+.resume-technical section {
+    margin-bottom: 1.5cm;
+}
+
+.resume-technical .skills-grid,
+.resume-technical .experience-grid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1cm;
+}
