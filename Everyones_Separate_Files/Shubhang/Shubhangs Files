@@ -1,1 +1,49 @@
 Shubhangs Files
+
+Here’s a summary of what each main code file in your folder is responsible for:
+
+1. SkillMate_Hacksim.jsx
+Purpose:
+This is your main SkillMate website component.
+Features:
+Home dashboard with navigation (Home, Skill Roadmap, Resume Builder, HackSim).
+Handles navigation between sections using React state.
+Contains the full HackSim module (problem statement, pitch, file upload, AI evaluation).
+Contains all the UI and logic for the HackSim experience.
+Exports:
+The main SkillMate React component.
+
+2. Final.jsx
+Purpose:
+This is likely your integrated app that combines SkillMate, the Flowchart, and HackSim in one place.
+Features:
+Handles navigation between Home, Roadmap, Resume, Flowchart, and HackSim.
+Shows the Flowchart before allowing access to HackSim.
+Is the recommended main entry point for your app if you want the full integrated experience.
+Exports:
+The main SkillMateHacksim React component.
+
+3. Flowchart.jsx
+Purpose:
+Displays the HackSim prerequisites flowchart.
+Features:
+Shows a checklist of what’s needed before submitting to HackSim.
+Has a "Continue to HackSim" button to proceed to the HackSim module.
+Exports:
+The Flowchart React component.
+
+4. App.jsx
+Purpose:
+The default Vite/React starter app.
+Features:
+Shows Vite and React logos, a counter, and some demo text.
+Not used in your final project unless you specifically import and render it.
+Exports:
+The default App React component.
+
+5. main.jsx
+Purpose:
+The entry point for your React app.
+Features:
+Imports your main app component (should be Final.jsx or SkillMateHacksim).
+Renders it into the DOM.
