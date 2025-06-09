@@ -1,0 +1,9 @@
+Added the Resources Page (Praptis)
+Added the Quiz Pages (Vidishas)
+Added the flowchart and HackSim (Shubhangs) - order is messed up and the menu bar too
+
+
+Need to add the Resume Builder as a separate component altogether - should open as a new window sort of...??/ (Shreyass)
+
+
+To run this, create a vite+react project and replace all the files under src with these files...
