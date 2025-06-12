@@ -3,8 +3,8 @@
 // All features and styling will be preserved.
 
 import React, { useState, useRef, useEffect } from 'react';
-import './App.css';
-import '../styles.css';
+import './AppResume.css';
+//import '../styles.css';
 import './ResumePreview.css';
 
 const STORAGE_KEY = 'resumeBuilderData';
