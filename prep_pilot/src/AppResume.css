@@ -1,0 +1,248 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.container h1 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.controls {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #e1e4e8;
+}
+
+.controls label {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.controls select {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  background-color: white;
+  color: #2d3748;
+  font-size: 0.95rem;
+  min-width: 120px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.controls select:hover {
+  border-color: #a0aec0;
+}
+
+.controls select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+.controls button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #4299e1;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.controls button:hover {
+  background-color: #3182ce;
+}
+
+.controls button:active {
+  background-color: #2b6cb0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+fieldset {
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+}
+
+fieldset:hover {
+  border-color: #cbd5e0;
+}
+
+legend {
+  padding: 0 0.8rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+/* Checkbox styling */
+.section-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a0aec0;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.section-toggle:checked {
+  background-color: #4299e1;
+  border-color: #4299e1;
+}
+
+.section-toggle:checked::before {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  left: 4px;
+  top: -1px;
+}
+
+.section-toggle:hover {
+  border-color: #4299e1;
+}
+
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #2d3748;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background-color: white;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.preview-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+}
+
+.preview-container h2 {
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
+
+@media print {
+  #root {
+    padding: 0;
+    background: none;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    background: none;
+    width: 100%;
+  }
+
+  .container > *:not(.preview-container) {
+    display: none !important;
+  }
+
+  .preview-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+  }
+
+  .preview-container h2 {
+    display: none !important;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: white !important;
+    width: 100%;
+  }
+}

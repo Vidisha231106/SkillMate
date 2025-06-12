@@ -1,0 +1,295 @@
+/* Common Resume Preview Styles */
+.resume-preview {
+    background: white;
+    color: #2d3748;
+    width: 21cm; /* A4 width */
+    min-height: 29.7cm; /* A4 height */
+    margin: 0 auto;
+    padding: 2.5cm; /* Standard A4 margins */
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Template-specific content containers to respect borders */
+.resume-modern,
+.resume-traditional,
+.resume-technical {
+    position: relative;
+    height: 100%;
+    padding: 1cm; /* Internal padding from border */
+}
+
+/* Adjust Modern Template Layout */
+.resume-modern .resume-header {
+    margin: -1cm -1cm 2rem -1cm;
+    padding: 1.5rem;
+    background: #f8fafc;
+}
+
+.resume-modern .sidebar {
+    padding-right: 1.5rem;
+}
+
+.resume-modern .main-content {
+    padding-left: 1.5rem;
+}
+
+/* Adjust Traditional Template Layout */
+.resume-traditional .resume-header {
+    margin: -0.5cm -0.5cm 2rem -0.5cm;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #f8fafc, #fff, #f8fafc);
+}
+
+/* Adjust Technical Template Layout */
+.resume-technical .resume-header {
+    margin: -0.5cm -0.5cm 2rem -0.5cm;
+    padding: 0 0 1.5rem 0;
+}
+
+/* Resume Preview Styles */
+.resume-preview {
+    padding: 2rem;
+    background: white;
+    color: black;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 100vh; /* A4 height */
+    max-width: 21cm; /* A4 width */
+    margin: 0 auto;
+}
+
+.resume-preview h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+
+.resume-preview h2 {
+    color: #3182ce;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.resume-preview h3 {
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 1rem;
+}
+
+/* Modern Template */
+.resume-modern {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resume-modern .resume-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+}
+
+.resume-modern .sidebar {
+    width: 30%;
+    padding: 1.5rem;
+    background: #f8fafc;
+}
+
+.resume-modern .main-content {
+    width: 70%;
+    padding: 1.5rem;
+}
+
+/* Modern Template Skills */
+.resume-modern .skill-row {
+    margin: 12px 0;
+}
+
+.resume-modern .progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.resume-modern .progress-bar-inner {
+    height: 100%;
+    background: #4299e1;  /* Restored blue color */
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Traditional Template */
+.resume-traditional {
+    padding: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.resume-traditional .resume-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(to right, #f8fafc, #fff, #f8fafc);
+    border-radius: 8px;
+    position: relative;
+}
+
+.resume-traditional .resume-header h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.resume-traditional .resume-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #4299e1, transparent);
+}
+
+.resume-traditional section {
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.resume-traditional section:hover {
+    border-left-color: #4299e1;
+    background: linear-gradient(to right, #f8fafc, transparent);
+}
+
+.resume-traditional h3 {
+    color: #2c5282;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.resume-traditional h3::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #4299e1;
+    margin-right: 12px;
+    transform: rotate(45deg);
+}
+
+.resume-traditional p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    padding-left: 1.3rem;
+}
+
+.resume-traditional ul {
+    list-style: none;
+    padding-left: 1.3rem;
+}
+
+.resume-traditional ul li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.resume-traditional ul li::before {
+    content: '•';
+    color: #4299e1;
+    position: absolute;
+    left: -1rem;
+    font-weight: bold;
+}
+
+.resume-traditional .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+    color: #4a5568;
+}
+
+.resume-traditional section:nth-child(odd) {
+    background: linear-gradient(to right, #f8fafc80, transparent);
+}
+
+/* Technical Template */
+.resume-technical .resume-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Common Styles */
+section {
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white !important;
+    }
+
+    .resume-preview {
+        margin: 0 !important;
+        padding: 2.5cm !important;  /* Keep same padding as preview */
+        width: 21cm !important;     /* Keep same width as preview */
+        min-height: 29.7cm !important; /* Keep same height as preview */
+        box-shadow: none !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    /* Force sections to stay together */
+    section {
+        page-break-inside: avoid;
+    }
+
+    /* Keep headers with their content */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    /* Keep list items together */
+    li {
+        page-break-inside: avoid;
+    }
+
+    /* Keep backgrounds in print */
+    .resume-modern .sidebar,
+    .resume-modern .resume-header,
+    .resume-traditional .resume-header {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background-color: #f8fafc !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;  /* Remove page margins since we handle it in .resume-preview */
+    }
+}

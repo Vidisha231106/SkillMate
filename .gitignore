@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+.vscode/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Misc
+*.local
+coverage/
+
+# C/C++
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+*.pdb
+*.class
+*.pyc
+*.pyo
+*.pyd
+*.vs/
